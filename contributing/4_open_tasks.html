@@ -94,13 +94,13 @@
 <p class="caption" role="heading"><span class="caption-text">Framework Classes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../stateful/converters.html">Converters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stateful/activations.html">Activations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stateful/layers.html">Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stateful/optimizers.html">Optimizers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../stateful/sequential.html">Sequential</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stateful/norms.html">Norms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../stateful/initializers.html">Initializers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stateful/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stateful/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stateful/optimizers.html">Optimizers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../stateful/module.html">Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stateful/activations.html">Activations</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
@@ -193,8 +193,9 @@ Specifically, you <strong>do not</strong> need to address the following:</p>
 <p>However, everything else covered in the <a class="reference internal" href="../deep_dive.html#deep-dive"><span class="std std-ref">Deep Dive</span></a> must be addressed.
 Some common important tasks are:</p>
 <ol class="arabic simple">
-<li><p>remove all <code class="code docutils literal notranslate"><span class="pre">lambda</span></code> and direct bindings for the backend functions,
-with each function instead defined using <code class="code docutils literal notranslate"><span class="pre">def</span></code>.</p></li>
+<li><p>remove all <code class="code docutils literal notranslate"><span class="pre">lambda</span></code> and direct bindings for the backend functions
+(in <code class="code docutils literal notranslate"><span class="pre">ivy.functional.backends</span></code>), with each function instead defined using
+<code class="code docutils literal notranslate"><span class="pre">def</span></code>.</p></li>
 <li><p>implement the following if they don’t exist but should do: <code class="code docutils literal notranslate"><span class="pre">ivy.Array</span></code> instance
 method, <code class="code docutils literal notranslate"><span class="pre">ivy.Container</span></code> static method, <code class="code docutils literal notranslate"><span class="pre">ivy.Container</span></code> instance method,
 <code class="code docutils literal notranslate"><span class="pre">ivy.Array</span></code> special method, <code class="code docutils literal notranslate"><span class="pre">ivy.Array</span></code> reverse special method,
